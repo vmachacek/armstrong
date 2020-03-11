@@ -1,18 +1,149 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300&display=swap" rel="stylesheet">
 	<title>Friendly reminder, you gonna die</title>
 	<style>
-	   html 
-	   {
-		  	background: url("whale.jpg") no-repeat center center fixed;
-		  	-webkit-background-size: cover;
-		  	-moz-background-size: cover;
-		  	-o-background-size: cover;
-		  	background-size: cover;
-		  }
+		html {
+			background: url("whale.jpg") no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+
+			font-family: 'Work Sans', serif;
+		}
+
+		.modal {
+			background-color: rgba(255, 255, 255, 0.6);
+			margin-top: 0.2vh;
+		}
+
+		h1 {
+			font-size: 56px;
+			font-weight: 400;
+		}
+
+		h1 {
+			font-size: 56px;
+			font-weight: 400;
+		}
+
+		h2 {
+			font-size: 42px;
+			font-weight: 400;
+		}
+
+		.special {
+			font-size: 4.444rem !important;
+		}
+
+		.left-col {
+			flex: 3;
+		}
+
+		.right-col {
+			flex: 7;
+		}
+
+		.right {
+			text-align: right;
+		}
+
+		.text-right {
+			text-align: right;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+		.m-auto {
+			margin: auto;
+		}
+
+		.modal {
+			align-items: center;
+			display: flex;
+			position: fixed;
+			justify-content: center;
+			z-index: 2147483647;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			background-color: rgba(0, 0, 0, 0.4);
+			color: white
+		}
+
+		.modal-content {
+			margin: 0;
+			padding: 20px;
+			border: 1px solid #888;
+			width: 100%;
+			height: 100%;
+			align-items: center;
+			display: flex;
+			position: fixed;
+			justify-content: center
+		}
+
+		.close {
+			color: #aaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: black;
+			text-decoration: none;
+			cursor: pointer;
+		}
 	</style>
 </head>
+
 <body>
+	<!-- <div class="modal">
+		<h1>Tee Hee</h1>
+		<h2>
+			You are gonna die, probably in
+		</h2>
+	</div> -->
+
+	<div class="modal" style="text-align:center">
+
+		<div class="modal-content">
+			<div style="display: flex; flex-direction: row;">
+				<iframe allowfullscreen frameborder="0" height="315" src="https://www.youtube.com/embed/2lK4LrD8Ii4"
+					width="560"></iframe>
+				<div style="padding-left:3rem">
+					<h2>
+						Don't consume, Create.</h2>
+					<h1>
+						Gods will offer you chances.<br>
+						See them. Take them.
+					</h1>
+					<div>
+						<a href="https://www.headspace.com/"
+							style="font-family:sans-serif,sans,verdana,arial;color:#f87b73;margin:20px;font-size:14px">Need
+							some headspace?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 
+	FINISH SOME OTHER TIME	
+	<script>
+		var s = fetch('https://trello.com/b/Rhh10KJV.json', { credentials: 'include' }).then(f => console.log(f));
+	</script> 
+	-->
+
 </body>
+
 </html>
