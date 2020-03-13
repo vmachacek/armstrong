@@ -92,8 +92,9 @@
 			justify-content: center;
 			align-items: center;
 		}
-
 	</style>
+	<script src="https://kit.fontawesome.com/b395f5da74.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -101,10 +102,19 @@
 
 	<div style="display: flex; flex-direction: row; margin-bottom:10rem;">
 
-		<video width="560" height="315" autoplay loop muted>
-			<source src="calm.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
+		<div>
+
+			<video width="560" height="315" id="calmVideo" autoplay loop muted>
+				<source src="calm.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+
+			<div style="margin-top:1rem">
+				<div id="changeVolumeButton">
+					<i class="fal fa-volume-slash fa-fw" id="muteIcon"></i>
+				</div>
+			</div>
+		</div>
 
 		<!-- <iframe allowfullscreen frameborder="0" height="315" src="https://www.youtube.com/embed/2lK4LrD8Ii4"
 			width="560"></iframe> -->
@@ -122,6 +132,24 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+
+		let button = document.getElementById("changeVolumeButton");
+
+		const toggleVolume = (eve) => {
+			let icon = document.getElementById("muteIcon");
+			icon.className = icon.className == 'fal fa-volume-up fa-fw' ? 'fal fa-volume-slash fa-fw' : 'fal fa-volume-up fa-fw';
+
+			calmVideo.muted = !calmVideo.muted;
+		}
+
+
+
+		button.addEventListener('click', toggleVolume);
+
+
+	</script>
 </body>
 
 </html>
