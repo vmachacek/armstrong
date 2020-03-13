@@ -94,16 +94,11 @@
 		}
 	</style>
 	<script src="https://kit.fontawesome.com/b395f5da74.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
-
-
 	<div style="display: flex; flex-direction: row; margin-bottom:10rem;">
-
 		<div>
-
 			<video width="560" height="315" id="calmVideo" autoplay loop muted>
 				<source src="calm.mp4" type="video/mp4">
 				Your browser does not support the video tag.
@@ -134,9 +129,8 @@
 	</div>
 
 	<script>
-
 		let button = document.getElementById("changeVolumeButton");
-
+		
 		const toggleVolume = (eve) => {
 			let icon = document.getElementById("muteIcon");
 			icon.className = icon.className == 'fal fa-volume-up fa-fw' ? 'fal fa-volume-slash fa-fw' : 'fal fa-volume-up fa-fw';
@@ -144,12 +138,7 @@
 			calmVideo.muted = !calmVideo.muted;
 			calmVideo.volume = 0.5;
 		}
-
-
-
 		button.addEventListener('click', toggleVolume);
-
-
 	</script>
 </body>
 
