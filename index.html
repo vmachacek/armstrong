@@ -5,13 +5,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300&display=swap" rel="stylesheet">
 	<title>Friendly reminder, you gonna die</title>
 	<style>
-		html {
-			background: url("whale.jpg") no-repeat center center fixed;
+		body {
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover;
-
 			font-family: 'Work Sans', serif;
 			color: white
 		}
@@ -126,16 +124,14 @@
 				Gods are offering you chances.<br>
 				See them. Take them.
 			</h1>
-			<div>
-				<a href="https://www.headspace.com/"
-					style="font-family:sans-serif,sans,verdana,arial;color:#f87b73;margin:20px;font-size:14px">Need
-					some headspace?</a>
-			</div>
 		</div>
 	</div>
 
 	<script>
 		calmAudio.play()
+		const pictures = 14;
+		const index = Math.ceil(Math.random() * pictures);
+		document.body.style.backgroundImage = `url('img/${index}.jpg')`;
 	</script>
 </body>
 
