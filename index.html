@@ -120,13 +120,33 @@
 
 <body>
 	<div class="container">
-		<div>
-			<div>
-				<img src="circle.svg">
-			</div>
+		<img src="circle.svg" id="animation">
+	</div>
+
+	<div style="margin-top:1rem">
+		<div id="changeVolumeButton">
+			<i class="fal fa-volume-slash fa-fw" id="muteIcon"></i>
 		</div>
 	</div>
+
+	<video width="1" height="1" id="calmVideo" autoplay loop muted>
+		<source src="calm.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+
 	<script>
+
+		let button = document.getElementById("changeVolumeButton");
+
+		const toggleVolume = (eve) => {
+			let icon = document.getElementById("muteIcon");
+			icon.className = icon.className == 'fal fa-volume-up fa-fw' ? 'fal fa-volume-slash fa-fw' : 'fal fa-volume-up fa-fw';
+
+			calmVideo.muted = !calmVideo.muted;
+			calmVideo.volume = 0.5;
+		}
+		button.addEventListener('click', toggleVolume);
+
 		const pictures = 14;
 		const index = Math.ceil(Math.random() * pictures);
 		document.body.style.backgroundImage = `url('img/${index}.jpg')`;
