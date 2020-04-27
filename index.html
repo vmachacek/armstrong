@@ -133,7 +133,9 @@
 	<script>
 
 		let button = document.getElementById("changeVolumeButton");
-
+		const body = document.getElementsByTagName("body");
+		
+		
 		const toggleVolume = (eve) => {
 			let icon = document.getElementById("muteIcon");
 			icon.className = icon.className == 'fal fa-volume-up fa-fw' ? 'fal fa-volume-slash fa-fw' : 'fal fa-volume-up fa-fw';
@@ -141,11 +143,16 @@
 			calmVideo.muted = !calmVideo.muted;
 			calmVideo.volume = 0.5;
 		}
+
 		button.addEventListener('click', toggleVolume);
+		body.addEventListener('keyup', toggleVolume);
 
 		const pictures = 14;
 		const index = Math.ceil(Math.random() * pictures);
 		document.body.style.backgroundImage = `url('img/${index}.jpg')`;
+
+		
+
 	</script>
 </body>
 
