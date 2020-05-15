@@ -1,19 +1,23 @@
-<span routerlink="/weeks">
-  <i class="fal fa-calendar-alt fa-2x"></i>
-</span>
+<div #container class="w-100 h-100 calm position-relative display-flex">
 
-<div class="container" (click)="toggleVolume()">
-  <img src="/assets/circle.svg" class="w-100">
-</div>
-
-<div style="margin-top:1rem">
-  <div (click)="toggleVolume()">
-    <span *ngIf="muted"><i class="fal fa-volume-slash fa-fw fa-2x"></i></span>
-    <span *ngIf="!muted"><i class="fal fa-volume-up fa-fw fa-2x"></i></span>
+  <div routerLink="/weeks" class="calendar-menu">
+    <i class="fal fa-calendar-alt fa-2x"></i>
   </div>
-</div>
 
-<video width="1" #video height="1" id="calmVideo" loop muted>
-  <source src="/assets/calm.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+  <div class="position-absolute mute-button">
+    <div (click)="toggleVolume()">
+      <span *ngIf="muted"><i class="fal fa-volume-slash fa-fw fa-2x"></i></span>
+      <span *ngIf="!muted"><i class="fal fa-volume-up fa-fw fa-2x"></i></span>
+    </div>
+  </div>
+
+  <div class="cc">
+    <img src="/assets/circle.svg" class="w-100">
+  </div>
+
+
+  <video width="1" #video height="1" id="calmVideo" volume=".5" loop muted autoplay>
+    <source src="/assets/calm.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>

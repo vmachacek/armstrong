@@ -6,10 +6,15 @@ import { Router } from '@angular/router';
   templateUrl: './calm.component.html',
   styleUrls: ['./calm.component.scss']
 })
-export class CalmComponent implements OnInit, AfterViewInit {
+export class CalmComponent implements AfterViewInit {
 
   @ViewChild('video')
   video: ElementRef;
+
+  @ViewChild('container')
+  container: ElementRef;
+
+
   muted: boolean = true;
 
   constructor(private router: Router) {
@@ -22,25 +27,15 @@ export class CalmComponent implements OnInit, AfterViewInit {
 
   }
 
-  ngOnInit(): void {
-    const pictures = 14;
-    const index = Math.ceil(Math.random() * pictures);
-    document.body.style.backgroundImage = `url('/assets/img/${index}.jpg')`;
-    document.body.addEventListener('keyup', this.toggleVolume);
-  }
-
   ngAfterViewInit() {
-    console.info(this.video.nativeElement.muted)
+    const index = Math.ceil(Math.random() * 14);
+    this.container.nativeElement.style.backgroundImage = `url('/assets/img/${index}.jpg')`;
+    console.info()
   }
-
-
 
   toggleVolume() {
-
-
-
     this.muted = !this.muted;
-    // calmVideo.muted = !calmVideo.muted;
-    // calmVideo.volume = 0.5;
+    this.video.nativeElement.muted = this.muted;
+    this.video.nativeElement.volume = 0.5;
   }
 }
