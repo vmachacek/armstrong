@@ -1,0 +1,42 @@
+.month-header {
+  display: flex;
+}
+
+.container {
+  overflow: hidden;
+}
+.week {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+.spent {
+  background-color: #E63946;
+}
+
+.not-spent {
+  background-color: #457B9D;
+}
+
+.month-header {
+  padding-right: 0.2rem;
+  flex: 1;
+}
+
+.main-header {
+  padding-top: 0.2rem;
+}
+
+.dates-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.years-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

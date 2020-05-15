@@ -1,0 +1,25 @@
+html,
+body,
+app-root,
+app-root > *,
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+router-outlet {
+  display: none;
+}
+
+//https://coolors.co/e63946-f1faee-a8dadc-457b9d-1d3557
+body {
+  background-color: #f1faee;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Work Sans", serif;
+  color: white;
+  background-position: center;
+}

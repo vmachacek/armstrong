@@ -1,0 +1,15 @@
+<div class="container" (click)="toggleVolume()">
+  <img src="/assets/circle.svg" class="w-100">
+</div>
+
+<div style="margin-top:1rem">
+  <div (click)="toggleVolume()">
+    <span *ngIf="muted"><i class="fal fa-volume-slash fa-fw fa-2x"></i></span>
+    <span *ngIf="!muted"><i class="fal fa-volume-up fa-fw fa-2x"></i></span>
+  </div>
+</div>
+
+<video width="1" #video height="1" id="calmVideo" loop muted>
+  <source src="/assets/calm.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>

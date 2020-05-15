@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="d-flex w-100">
+    <div class="dates-panel d-none d-lg-flex">
+      <div>01.01.1987</div>
+      <div>01.01.2067</div>
+    </div>
+    <div class="w-100 years-container">
+      <div *ngFor="let year of years" class="year-header w-100 h-100 d-flex"
+        [ngClass]="{'main-header' : year.number % 10 === 0 && year.number !== 0}">
+        <div *ngFor="let month of year.months" class="d-flex month-header">
+          <div *ngFor="let week of month.weeks" class="week" [title]="week.date.calendar()"
+            [ngClass]="{'spent' : week.isHistory, 'not-spent' : !week.isHistory}"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
