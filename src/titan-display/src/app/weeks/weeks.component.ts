@@ -9,7 +9,9 @@ import * as moment from 'moment';
 })
 export class WeeksComponent implements OnInit {
   constructor(private _title: Title) {
-    this._title.setTitle('Friendly reminder, you gonna die')
+    const birthDay = moment("19870331", "YYYYMMDD").add(80, 'years');
+    const weeksLeft = Math.ceil(birthDay.diff(moment(), 'days') / 7);
+    this._title.setTitle(`You have ${weeksLeft} weeks left`)
   }
 
   years: Year[];
