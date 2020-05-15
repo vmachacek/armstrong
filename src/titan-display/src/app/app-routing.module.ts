@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { CalmComponent } from './calm/calm.component';
 import { WeeksComponent } from './weeks/weeks.component';
 
-
 const routes: Routes = [
   {
     path: 'weeks',

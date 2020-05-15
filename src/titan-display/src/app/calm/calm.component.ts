@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-calm',
@@ -11,7 +12,15 @@ export class CalmComponent implements OnInit, AfterViewInit {
   video: ElementRef;
   muted: boolean = true;
 
-  constructor() { }
+  constructor(private router: Router) {
+
+    const w = window as any;
+
+    w.getRouter = () => {
+      return this.router;
+    }
+
+  }
 
   ngOnInit(): void {
     const pictures = 14;
