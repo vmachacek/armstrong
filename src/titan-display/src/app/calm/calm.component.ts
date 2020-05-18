@@ -16,16 +16,6 @@ export class CalmComponent implements AfterViewInit {
 
   muted: boolean = false;
 
-  constructor(private router: Router) {
-
-    const w = window as any;
-
-    w.getRouter = () => {
-      return this.router;
-    }
-
-  }
-
   ngAfterViewInit() {
     const index = Math.ceil(Math.random() * 13);
     this.container.nativeElement.style.backgroundImage = `url('/assets/img/${index}.jpg')`;
