@@ -14,8 +14,7 @@ export class CalmComponent implements AfterViewInit {
   @ViewChild('container')
   container: ElementRef;
 
-
-  muted: boolean = true;
+  muted: boolean = false;
 
   constructor(private router: Router) {
 
@@ -30,7 +29,7 @@ export class CalmComponent implements AfterViewInit {
   ngAfterViewInit() {
     const index = Math.ceil(Math.random() * 14);
     this.container.nativeElement.style.backgroundImage = `url('/assets/img/${index}.jpg')`;
-    console.info()
+    this.video.nativeElement.volume = 0.1;
   }
 
   toggleVolume() {
