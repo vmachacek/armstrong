@@ -27,7 +27,7 @@ export class CalmComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    const index = Math.ceil(Math.random() * 14);
+    const index = Math.ceil(Math.random() * 13);
     this.container.nativeElement.style.backgroundImage = `url('/assets/img/${index}.jpg')`;
     this.video.nativeElement.volume = 0.1;
   }
